@@ -4,7 +4,7 @@
   "manifest_version": 1,
   "action": {
     "title": "Owlbear Timer",
-    "icon": "/icon2.svg",
+    "icon": "/icon.svg",
     "popover": "/",
     "height": 600,
     "width": 400
