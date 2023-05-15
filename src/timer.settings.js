@@ -8,8 +8,6 @@ function getTimeValue(inputName) {
 }
 
 function setupModal(elementButton) {
-
-
   async function setClickEvent() {
     let metadataField = {
       timerActive: true,
