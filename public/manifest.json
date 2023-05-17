@@ -1,12 +1,12 @@
 {
   "name": "Owlbear Timer",
-  "version": "1.0.0",
-  "manifest_version": 1,
+  "version": "1.1.0",
+  "manifest_version": 2,
   "action": {
     "title": "Owlbear Timer",
     "icon": "/icon.svg",
     "popover": "/",
-    "height": 600,
-    "width": 400
+    "height": 300,
+    "width": 370
   }
 }
