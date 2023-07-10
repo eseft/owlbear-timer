@@ -17,6 +17,9 @@ export async function startTimer () {
   // This will trigger modal to close
   const closeTimer = (currentMetadata) => {
     currentMetadata[`${ID}/metadata`].timerActive = false;
+    // Play ding sound on modal close
+    let ding = new Audio("/ding.mp3");
+    ding.play();
     OBR.room.setMetadata(currentMetadata)
   }
 

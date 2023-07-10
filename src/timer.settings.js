@@ -45,9 +45,6 @@ export function manageTimer (metadata) {
         disablePointerEvents: true,
       })
     } else if (!timerActive) {
-      // Play ding sound on modal close
-      let ding = new Audio("/ding.mp3");
-      ding.play();
       OBR.modal.close(`${ID}/timer`);
     }
 }
