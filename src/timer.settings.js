@@ -32,10 +32,10 @@ export function setupTimer () {
   setupModal(document.getElementById("modal"));
 };
 
-export function manageTimer (metadata, prevState) {
+export function manageTimer (metadata) {
     const timerActive = metadata[`${ID}/metadata`].timerActive
-    if (timerActive && !prevState) {
-      prevState = true
+    if (timerActive) {
+
       // Owlbear call to open model
       OBR.modal.open({
         id: `${ID}/timer`,
@@ -44,8 +44,7 @@ export function manageTimer (metadata, prevState) {
         width: 320,
         disablePointerEvents: true,
       })
-    } else if (!timerActive && prevState) { // TODO(Issue #4 is here)
-      prevState = false
+    } else if (!timerActive) {
       // Play ding sound on modal close
       let ding = new Audio("/ding.mp3");
       ding.play();

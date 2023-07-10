@@ -3,6 +3,7 @@ import { manageTimer } from "./src/timer.settings.js"
 import { startTimer } from "./src/timer.js"
 import OBR from "@owlbear-rodeo/sdk";
 
+
 const urlRoutes = {
   "/": {
     template: {
@@ -49,7 +50,7 @@ const urlLocationHandler = async () => {
   route.script(role);
 };
 
-let prevState = false
+
 OBR.onReady(async () => {
   // Routes happen only if Owlbear Ready
   // Otherwise we didn't get Role
@@ -57,6 +58,6 @@ OBR.onReady(async () => {
 
   // Function will be executed any time room metadata changes
   OBR.room.onMetadataChange(async (metadata) => {
-    manageTimer(metadata, prevState);
+    manageTimer(metadata);
   })
 })
